@@ -1,16 +1,22 @@
 services:
   wireguard:
+    container_name: wireguard
     build:
       context: ./docker
-    container_name: wireguard
+      dockerfile: Dockerfile
+    restart: unless-stopped
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
-    volumes:
-      - ./config/wg0.conf:/etc/wireguard/wg0.conf
-    ports:
-      - "51820:51820/udp"
     sysctls:
-      - net.ipv4.ip_forward=1
-      - net.ipv4.conf.all.src_valid_mark=1
-    restart: unless-stopped
+      net.ipv4.ip_forward: 1
+      net.ipv4.conf.all.src_valid_mark: 1
+    volumes:
+      - type: bind
+        source: ./config/wg0.conf
+        target: /etc/wireguard/wg0.conf
+    ports:
+      - name: wireguard
+        published: 51820
+        target: 51820
+        protocol: udp
