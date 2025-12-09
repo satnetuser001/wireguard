@@ -1,10 +1,10 @@
-# WireGuard VPN server running in a Docker container
+## WireGuard VPN server running in a Docker container
 Self-made image based on Ubuntu
 
 ### System requirements:
-- docker
-- absence of docker images, containers, or networks named wireguard  
-- unoccupied port 51820 (or the port number you selected)
+- `docker`
+- absence of docker images, containers, or networks named `wireguard`
+- unoccupied port `51820` (or the port number you selected)
 
 ### Server configuration
 1. Clone this repository.
