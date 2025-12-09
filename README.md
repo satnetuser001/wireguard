@@ -1,12 +1,12 @@
 # WireGuard VPN server in Docker container
 Custom image based on Ubuntu for quick deployment.  
-Note: to speed up the transfer of the VPN server to another host, you can save the `wg0.conf` file after completing the setup and use it later.
+Note: to speed up the transfer of the VPN server to another host, you can save the `wg0.conf` file after completing the setup.
 
 ### Server system requirements:
 - public IP address 
 - docker
 - absence of docker images, containers, or networks named `wireguard`
-- unoccupied port `51820` (you will be able to change the port number later)
+- unoccupied port `51820` (you can use another port number)
 
 ### Server setup
 1. Clone this repository.
@@ -17,9 +17,9 @@ git clone https://github.com/satnetuser001/wireguard-container.git
 ```bash
 cd wireguard
 ```
-3. Optionally. Change the WireGuard port number to a non-standard.
+3. Optionally. Change the WireGuard port number to a non-standard.  
 In the `compose.yml` file, under the `ports` parameter, change the `published` value to your own in the range 1–65535.
-4. Generate key files for the server and all clients.
+4. Generate key files for the server and all clients.  
 Note: key files can be generated on the client side for convenience.
 ```bash
 wg genkey | tee server_private.key | wg pubkey > server_public.key
