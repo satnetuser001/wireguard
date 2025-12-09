@@ -65,7 +65,7 @@ sudo subl /etc/wireguard/wg0.conf
 ```
 3. Add the contents of the generated keys to the `wg0.conf` file.  
 Note: use the example below.  
-Important: standard value for `SERVER_PORT_HERE` is `51820`, if you did not change it in `Server setup` step 3.
+Important: standard value for `SERVER_PORT_HERE` is `51820`, if you didn't change it in `Server setup` step 3.
 ```text
 ### CLIENT_1 ###
 [Interface]
