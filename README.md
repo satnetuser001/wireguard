@@ -2,8 +2,8 @@
 Self-made image based on Ubuntu
 
 ### System requirements:
-- `docker`
-- absence of docker images, containers, or networks named wireguard
+- docker
+- absence of docker images, containers, or networks named `wireguard`
 - unoccupied port `51820` (or the port number you selected)
 
 ### Server configuration
