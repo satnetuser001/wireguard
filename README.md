@@ -46,7 +46,7 @@ docker compose down --timeout 1
 ```
 8. If you need to rebuild the image and restart the container to apply new settings (e.g., port).
 ```bash
-docker compose up -d --build --force-recreate
+docker compose up -d --build --force-recreate --timeout 1
 ```  
 
 ### Client setup
