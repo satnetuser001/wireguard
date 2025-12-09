@@ -1,9 +1,11 @@
 services:
   wireguard:
-    container_name: wireguard
+    image: wireguard:latest
+    pull_policy: build
     build:
       context: ./docker
       dockerfile: Dockerfile
+    container_name: wireguard
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
@@ -15,8 +17,13 @@ services:
       - type: bind
         source: ./config/wg0.conf
         target: /etc/wireguard/wg0.conf
+    networks:
+      - wireguard-net
     ports:
-      - name: wireguard
-        published: 51820
+      - published: 51820
         target: 51820
         protocol: udp
+
+networks:
+  wireguard-net:
+    name: wireguard
