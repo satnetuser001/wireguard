@@ -33,8 +33,8 @@ wg genkey | tee client_2_private.key | wg pubkey > client_2_public.key
 ```bash
 wg genkey | tee client_N_private.key | wg pubkey > client_N_public.key
 ```
-5. Add the contents of the generated keys to the `wg0.conf` file.
-Note: the `wg0.conf` file contains hints where to insert each key.
+5. Add the contents of the generated keys to the `wg0.conf` file.  
+Note: the `wg0.conf` file contains hints where to insert each key.  
 Important: add the necessary number of `### CLIENTs ###` entries or remove the excess ones in the `wg0.conf` file.
 6. Up the container.
 ```bash
