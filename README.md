@@ -11,7 +11,7 @@ Note: to speed up the transfer of the VPN server to another host, you can save t
 ### Server setup
 1. Clone this repository.
 ```bash
-git clone https://github.com/satnetuser001/wireguard-container.git
+git clone https://github.com/satnetuser001/wireguard.git
 ````
 3. Navigate to the `wireguard` directory.
 ```bash
