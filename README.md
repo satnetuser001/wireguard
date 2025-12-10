@@ -1,4 +1,4 @@
-# WireGuard VPN server in Docker container
+# WireGuard VPN full-tunnel server in Docker container
 Custom image based on Ubuntu for quick deployment.  
 Note: to speed up the transfer of the VPN server to another host, you can save the `wg0.conf` file after completing the setup.
 
